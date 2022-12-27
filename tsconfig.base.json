@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@shadow/components/heading": ["libs/components/heading/src/index.ts"],
+      "@shadow/components/page-wrapper": [
+        "libs/components/page-wrapper/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
