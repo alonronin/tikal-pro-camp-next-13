@@ -7,6 +7,7 @@ export function AddTodo() {
   const onSubmit = async (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
+
     const payload = Object.fromEntries(form.entries());
     const body = JSON.stringify(payload);
     console.log(body);

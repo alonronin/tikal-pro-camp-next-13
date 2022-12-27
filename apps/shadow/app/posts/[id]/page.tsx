@@ -46,7 +46,12 @@ export default async function Post({ params }) {
       <h2 className="font-bold text-xl text-blue-500">Comments</h2>
 
       <Suspense fallback="Loading...">
-        <Comments id={post.id} />
+        {
+          // will be fixed: https://github.com/microsoft/TypeScript/pull/51328
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
+          <Comments id={post.id} />
+        }
       </Suspense>
     </PageWrapper>
   );
